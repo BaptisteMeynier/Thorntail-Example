@@ -1,0 +1,7 @@
+<subsystem xmlns="urn:jboss:domain:naming:2.0">
+    <bindings>
+    <simple name="java:global/book/X-Max-Per-Page" value="10" type="int" />
+    <simple name="java:global/db/max-entries" value="100" type="int" />
+    </bindings>
+    <remote-naming/>
+</subsystem>

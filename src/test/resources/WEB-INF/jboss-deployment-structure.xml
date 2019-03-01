@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+    <deployment>
+        <exclusions>
+            <module name="org.jboss.resteasy.resteasy-jackson-provider"/>
+            <module name="org.jboss.resteasy.resteasy-jackson2-provider"/>
+            <!--module name="org.jboss.resteasy.resteasy-validator-provider-11"/-->
+        </exclusions>
+        <!--exclude-subsystems>
+            <subsystem name="resteasy" />
+        </exclude-subsystems-->
+        <!--dependencies>
+            <module name="conf.env" export="true"/>
+            <module name="conf.common" export="true"/>
+        </dependencies-->
+    </deployment>
+    <!--module name="deployment.resteasy.correction" >
+        <resources>
+            <resource-root path="WEB-INF/lib/resteasy-validator-provider-11-3.6.1.Final.jar" />
+        </resources>
+        <module-alias name="deployment.org.jboss.resteasy.resteasy-validator-provider-11"/>
+    </module-->
+    <!-- This is a module that re-exports the containers version of javassist.util.proxy -->
+    <!-- This means that there is only one version of the Proxy classes defined          -->
+    <!--module name="deployment.javassist.proxy" >
+        <dependencies>
+            <module name="org.javassist" >
+                <imports>
+                    <include path="javassist/util/proxy" />
+                    <exclude path="/**" />
+                </imports>
+            </module>
+        </dependencies>
+    </module-->
+</jboss-deployment-structure>

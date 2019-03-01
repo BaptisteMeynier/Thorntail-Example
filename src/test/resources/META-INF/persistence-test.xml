@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="bookStorePU" transaction-type="JTA">
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.create-target" value="bookCreate.ddl"/>
+            <property name="javax.persistence.schema-generation.scripts.drop-target" value="bookDrop.ddl"/>
+            <property name="javax.persistence.sql-load-script-source" value="insert.sql"/>
+            <property name="javax.persistence.metamodel." value="insert.sql"/>
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+        </properties>
+    </persistence-unit>
+
+
+</persistence>
